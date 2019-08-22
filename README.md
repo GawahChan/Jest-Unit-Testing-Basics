@@ -1,1 +1,1 @@
-Practicing Basic Jest Unit Testing
+Getting to grips with jest and practicing basic jest unit testing.
