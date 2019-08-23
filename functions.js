@@ -9,9 +9,10 @@ const functions = {
         user['lastName'] = 'Chan';
         return user
     },
-    fetchUser: () => axios.get('https://jsonplaceholder.typicode.com/users/1')
+    fetchUser: () =>
+        axios.get('https://jsonplaceholder.typicode.com/users/1')
         .then(res => res.data)
-        .catch(err => 'error')
-}
+        .catch(err => 'error') 
+};
 
 module.exports = functions;
