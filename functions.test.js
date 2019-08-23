@@ -56,3 +56,21 @@ test('Admin should be in userNames', () => {
     userNames = ['John', 'Karen', 'admin'];
     expect(userNames).toContain('admin');
 });
+
+// Working with Async Data, use expect.assertions()
+// expect.assertions() verifies a certain number of assertions are called (used for async testing)
+//Promise
+// test('User fetched name is Leanne Graham', () => {
+//     expect.assertions(1);
+//     return functions.fetchUser()
+//         .then(data => {
+//             expect(data.name).toEqual('Leanne Graham');
+//         })
+// });
+
+// Async/Await
+test('User fetched name is Leanne Graham', async () => {
+    expect.assertions(1);
+    const data = await functions.fetchUser();
+    expect(data.name).toEqual('Leanne Graham');
+});
